@@ -1,0 +1,101 @@
+CRITICAL - 2024-08-01 07:26:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "menu_item.php"
+[Method: GET, Route: menu/show/2]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menu_item.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_item', [], true)
+ 3 APPPATH\Controllers\MenuController.php(23): view('menu_item', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-01 07:26:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "menu_item.php"
+[Method: GET, Route: menu/show/2]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menu_item.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_item', [], true)
+ 3 APPPATH\Controllers\MenuController.php(23): view('menu_item', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-01 07:26:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "menu_item.php"
+[Method: GET, Route: menu/show/2]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menu_item.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_item', [], true)
+ 3 APPPATH\Controllers\MenuController.php(23): view('menu_item', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-01 07:26:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "menu_item.php"
+[Method: GET, Route: menu/show/2]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menu_item.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_item', [], true)
+ 3 APPPATH\Controllers\MenuController.php(23): view('menu_item', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-01 11:32:04 --> ErrorException: foreach() argument must be of type array|object, null given
+[Method: POST, Route: process_checkout]
+in APPPATH\Controllers\OrderController.php on line 61.
+ 1 APPPATH\Controllers\OrderController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Controllers\\OrderController.php', 61)
+ 2 APPPATH\Controllers\OrderController.php(23): App\Controllers\OrderController->calculateTotal(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+INFO - 2024-08-01 11:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-01 11:33:02 --> ErrorException: foreach() argument must be of type array|object, null given
+[Method: POST, Route: process_checkout]
+in APPPATH\Controllers\OrderController.php on line 61.
+ 1 APPPATH\Controllers\OrderController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Controllers\\OrderController.php', 61)
+ 2 APPPATH\Controllers\OrderController.php(23): App\Controllers\OrderController->calculateTotal(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+INFO - 2024-08-01 11:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-01 11:33:31 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+INFO - 2024-08-01 11:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-01 11:34:08 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')

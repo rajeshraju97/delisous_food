@@ -1,0 +1,844 @@
+ERROR - 2024-08-02 05:05:54 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'deliciousfood', 3306, '', 0)
+#1 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\CodeIgniter Projects\deliciousfoods\app\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\CodeIgniter Projects\deliciousfoods\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\CodeIgniter Projects\deliciousfoods\system\rewrite.php(44): require_once('D:\\CodeIgniter ...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\CodeIgniter Projects\deliciousfoods\app\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\CodeIgniter Projects\deliciousfoods\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\CodeIgniter Projects\deliciousfoods\system\rewrite.php(44): require_once('D:\\CodeIgniter ...')
+#13 {main}
+CRITICAL - 2024-08-02 05:05:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 05:42:01 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 05:42:08 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 05:42:30 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 06:12:56 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 06:22:47 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 06:31:33 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 06:35:50 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 06:35:57 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 06:36:01 --> BadMethodCallException: Call to undefined method App\Models\OrderModel::insertOrder
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\OrderController.php(40): CodeIgniter\Model->__call('insertOrder', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 06:46:39 --> ErrorException: Undefined array key "price"
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 47.
+ 1 APPPATH\Views\menu_single_item.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "price"', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php', 47)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(23): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:11:52 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 45.
+ 1 APPPATH\Views\menu_single_item.php(45): number_format('', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(23): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:11:53 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 45.
+ 1 APPPATH\Views\menu_single_item.php(45): number_format('', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(23): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:16:31 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: menu]
+in APPPATH\Controllers\MenuController.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\MenuController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:16:31 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:16:58 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:17:05 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:17:31 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:18:00 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:18:23 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:18:50 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:19:48 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:21:43 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:22:59 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:25:39 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:28:31 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:32:11 --> Error: Class "App\Models\Menu" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:36:22 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 45.
+ 1 APPPATH\Views\menu_single_item.php(45): number_format('', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(28): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:37:36 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 45.
+ 1 APPPATH\Views\menu_single_item.php(45): number_format('', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(28): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:37:37 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 45.
+ 1 APPPATH\Views\menu_single_item.php(45): number_format('', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(28): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:37:42 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 45.
+ 1 APPPATH\Views\menu_single_item.php(45): number_format('', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(28): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:37:55 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 45.
+ 1 APPPATH\Views\menu_single_item.php(45): number_format('', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(28): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:43:40 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 45.
+ 1 APPPATH\Views\menu_single_item.php(45): number_format('', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(28): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:47:03 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 45.
+ 1 APPPATH\Views\menu_single_item.php(45): number_format('', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(26): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:47:04 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 45.
+ 1 APPPATH\Views\menu_single_item.php(45): number_format('', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(26): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:49:18 --> ErrorException: Undefined array key "ingredients"
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 43.
+ 1 APPPATH\Views\menu_single_item.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ingredients"', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(26): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 07:49:18 --> ErrorException: Undefined array key "ingredients"
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 43.
+ 1 APPPATH\Views\menu_single_item.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ingredients"', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(26): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 08:32:20 --> ErrorException: Undefined variable $menu_items
+[Method: GET, Route: menu/show/2]
+in APPPATH\Views\menu_single_item.php on line 20.
+ 1 APPPATH\Views\menu_single_item.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_items', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\menu_single_item.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('menu_single_item', [], true)
+ 5 APPPATH\Controllers\MenuController.php(26): view('menu_single_item', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MenuController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 10:53:36 --> ParseError: syntax error, unexpected token "<"
+[Method: GET, Route: checkout]
+in APPPATH\Controllers\CheckoutController.php on line 12.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Controllers\\CheckoutController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CheckoutController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CheckoutController')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\CheckoutController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+ERROR - 2024-08-02 11:14:32 --> mysqli_sql_exception: Table 'deliciousfood.orders' doesn't exist in D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `or...', 0)
+#1 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\CodeIgniter Projects\deliciousfoods\app\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save(Array)
+#9 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+#10 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#11 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\CodeIgniter Projects\deliciousfoods\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\CodeIgniter Projects\deliciousfoods\system\rewrite.php(44): require_once('D:\\CodeIgniter ...')
+#16 {main}
+CRITICAL - 2024-08-02 11:14:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'deliciousfood.orders' doesn't exist
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 11:14:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'deliciousfood.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 11:14:32\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 11:14:32\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 11:14:32 --> [Caused by] mysqli_sql_exception: Table 'deliciousfood.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 11:14:32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 11:14:32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 11:14:32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+ERROR - 2024-08-02 11:52:57 --> mysqli_sql_exception: Table 'deliciousfood.orders' doesn't exist in D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `or...', 0)
+#1 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\CodeIgniter Projects\deliciousfoods\app\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save(Array)
+#9 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+#10 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#11 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\CodeIgniter Projects\deliciousfoods\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\CodeIgniter Projects\deliciousfoods\system\rewrite.php(44): require_once('D:\\CodeIgniter ...')
+#16 {main}
+CRITICAL - 2024-08-02 11:52:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'deliciousfood.orders' doesn't exist
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 11:52:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'deliciousfood.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 11:52:57\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 11:52:57\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 11:52:57 --> [Caused by] mysqli_sql_exception: Table 'deliciousfood.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 11:52:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 11:52:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 11:52:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+ERROR - 2024-08-02 12:17:14 --> mysqli_sql_exception: Table 'deliciousfood.orders' doesn't exist in D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `or...', 0)
+#1 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\CodeIgniter Projects\deliciousfoods\app\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save(Array)
+#9 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+#10 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#11 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\CodeIgniter Projects\deliciousfoods\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\CodeIgniter Projects\deliciousfoods\system\rewrite.php(44): require_once('D:\\CodeIgniter ...')
+#16 {main}
+CRITICAL - 2024-08-02 12:17:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'deliciousfood.orders' doesn't exist
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 12:17:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'deliciousfood.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 12:17:14\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 12:17:14\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 12:17:14 --> [Caused by] mysqli_sql_exception: Table 'deliciousfood.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 12:17:14\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 12:17:14\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 12:17:14\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+ERROR - 2024-08-02 12:43:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'deliciousfood', 3306, '', 0)
+#1 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\CodeIgniter Projects\deliciousfoods\app\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\CodeIgniter Projects\deliciousfoods\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\CodeIgniter Projects\deliciousfoods\system\rewrite.php(44): require_once('D:\\CodeIgniter ...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\CodeIgniter Projects\deliciousfoods\app\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\CodeIgniter Projects\deliciousfoods\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\CodeIgniter Projects\deliciousfoods\system\rewrite.php(44): require_once('D:\\CodeIgniter ...')
+#13 {main}
+CRITICAL - 2024-08-02 12:43:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+ERROR - 2024-08-02 12:44:11 --> mysqli_sql_exception: Table 'deliciousfood.orders' doesn't exist in D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `or...', 0)
+#1 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\CodeIgniter Projects\deliciousfoods\app\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save(Array)
+#9 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+#10 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#11 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\CodeIgniter Projects\deliciousfoods\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\CodeIgniter Projects\deliciousfoods\system\rewrite.php(44): require_once('D:\\CodeIgniter ...')
+#16 {main}
+CRITICAL - 2024-08-02 12:44:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'deliciousfood.orders' doesn't exist
+[Method: POST, Route: process_checkout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 12:44:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'deliciousfood.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 12:44:11\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 12:44:11\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-02 12:44:11 --> [Caused by] mysqli_sql_exception: Table 'deliciousfood.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 12:44:11\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 12:44:11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (\'TEPPALA RAJESH\', \'rajesh.teppala97@gmail.com\', \'9-9-66\', \'credit_card\', \'null\', \'2024-08-02 12:44:11\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`name`, `email`, `address`, `payment_method`, `cart`, `created_at`) VALUES (:name:, :email:, :address:, :payment_method:, :cart:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\OrderController.php(35): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->processCheckout()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')

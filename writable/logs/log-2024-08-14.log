@@ -1,0 +1,140 @@
+ERROR - 2024-08-14 05:02:18 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'deliciousfood', 3306, '', 0)
+#1 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\CodeIgniter Projects\deliciousfoods\app\Controllers\Home.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\CodeIgniter Projects\deliciousfoods\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\CodeIgniter Projects\deliciousfoods\system\rewrite.php(44): require_once('D:\\CodeIgniter ...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\CodeIgniter Projects\deliciousfoods\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\CodeIgniter Projects\deliciousfoods\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\CodeIgniter Projects\deliciousfoods\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\CodeIgniter Projects\deliciousfoods\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\CodeIgniter Projects\deliciousfoods\app\Controllers\Home.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\CodeIgniter Projects\deliciousfoods\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\CodeIgniter Projects\deliciousfoods\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\CodeIgniter Projects\deliciousfoods\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\CodeIgniter Projects\deliciousfoods\system\rewrite.php(44): require_once('D:\\CodeIgniter ...')
+#13 {main}
+CRITICAL - 2024-08-14 05:02:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+INFO - 2024-08-14 05:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:23:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:23:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-14 05:24:16 --> ErrorException: Undefined variable $totalOrders
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Views\admin\dashboard.php on line 111.
+ 1 APPPATH\Views\admin\dashboard.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalOrders', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\admin\\dashboard.php', 111)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin\AdminAuthController.php(48): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminAuthController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminAuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-14 06:05:48 --> ErrorException: Undefined array key "cover"
+[Method: GET, Route: admin/menu]
+in APPPATH\Views\admin\menu.php on line 102.
+ 1 APPPATH\Views\admin\menu.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cover"', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\admin\\menu.php', 102)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\admin\\menu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('admin/menu', [], true)
+ 5 APPPATH\Controllers\Admin\AdminAuthController.php(84): view('admin/menu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminAuthController->menu()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminAuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-14 06:07:08 --> ErrorException: Undefined array key "cover"
+[Method: GET, Route: admin/menu]
+in APPPATH\Views\admin\menu.php on line 102.
+ 1 APPPATH\Views\admin\menu.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cover"', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\admin\\menu.php', 102)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\admin\\menu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('admin/menu', [], true)
+ 5 APPPATH\Controllers\Admin\AdminAuthController.php(84): view('admin/menu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminAuthController->menu()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminAuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-14 06:07:09 --> ErrorException: Undefined array key "cover"
+[Method: GET, Route: admin/menu]
+in APPPATH\Views\admin\menu.php on line 102.
+ 1 APPPATH\Views\admin\menu.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cover"', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\admin\\menu.php', 102)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\admin\\menu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('admin/menu', [], true)
+ 5 APPPATH\Controllers\Admin\AdminAuthController.php(84): view('admin/menu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminAuthController->menu()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminAuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
+CRITICAL - 2024-08-14 06:07:51 --> ErrorException: Undefined array key "cover"
+[Method: GET, Route: admin/menu]
+in APPPATH\Views\admin\menu.php on line 102.
+ 1 APPPATH\Views\admin\menu.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cover"', 'D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\admin\\menu.php', 102)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\CodeIgniter Projects\\deliciousfoods\\app\\Views\\admin\\menu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('admin/menu', [], true)
+ 5 APPPATH\Controllers\Admin\AdminAuthController.php(84): view('admin/menu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminAuthController->menu()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminAuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\CodeIgniter Projects\\deliciousfoods\\public\\index.php')
